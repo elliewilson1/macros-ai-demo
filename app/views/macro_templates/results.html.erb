@@ -2,8 +2,21 @@
 
 <div>Description: <%= @the_description %></div>
 
-<%= c = OpenAI::Chat.new %>
-<%= c.system("You are a nutritionist that speaks like Shakespeare") %>
+<h1>Results</h1>
 
-<%= c.user("How many calories in a slice of pizza?") %>
-<%= c.assistant! %>
+<dl>
+  <dt>Carbs (g)</dt>
+  <dt><%= @g_carbs %></dt>
+
+  <dt>Protein (g)</dt>
+  <dt><%= @g_protein %></dt>
+
+  <dt>Fat (g)</dt>
+  <dt><%= @g_fat %></dt>
+
+  <dt>Total calories (kcal)</dt>
+  <dt><%= @kcal %></dt>
+
+  <dt>Notes</dt>
+  <dt><%= @notes %></dt>
+</dl>
