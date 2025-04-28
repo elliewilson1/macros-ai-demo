@@ -1,3 +1,9 @@
 <div>Image: <%= @the_image %></div>
 
 <div>Description: <%= @the_description %></div>
+
+<%= c = OpenAI::Chat.new %>
+<%= c.system("You are a nutritionist that speaks like Shakespeare") %>
+
+<%= c.user("How many calories in a slice of pizza?") %>
+<%= c.assistant! %>
